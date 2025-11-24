@@ -4,7 +4,7 @@ const db = new DatabaseSync(":memory");
 //execute sql statements from strings
 db.exec(`
 
-    CREATE TABLE user (
+    CREATE TABLE users (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         username TEXT UNIQUE,
         password TEXT
@@ -26,3 +26,5 @@ db.exec(`
     )
     
     `);
+
+export default db;
