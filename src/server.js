@@ -11,6 +11,9 @@ const __filename = fileURLToPath(import.meta.url);
 //get the direcotory name from the file path
 const __dirname = dirname(__filename);
 
+//middleware
+app.use(express.json());
+
 //making sure all static files in public folder is served using express middleware
 app.use(express.static(path.join(__dirname, "../public")));
 
