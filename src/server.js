@@ -2,6 +2,7 @@ import express from "express";
 import path, { dirname } from "path";
 import { fileURLToPath } from "url";
 import authRoutes from "./routes/authRoutes.js";
+import todosRoutes from "./routes/todoRoutes.js";
 
 const app = express();
 const PORT = process.env.PORT || 8000;
@@ -9,7 +10,7 @@ const PORT = process.env.PORT || 8000;
 //get the file path of the URL of the current module
 const __filename = fileURLToPath(import.meta.url);
 
-//get the direcotory name from the file path
+//get the directory name from the file path
 const __dirname = dirname(__filename);
 
 //middleware
@@ -25,6 +26,7 @@ app.get("/", (req, res) => {
 
 //routes
 app.use("/", authRoutes);
+app.use("/", todosRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server listening at port ${PORT}`);
