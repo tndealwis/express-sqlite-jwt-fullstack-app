@@ -1,13 +1,13 @@
 ### GET /
-GET http://localhost:8080
+GET http://localhost:8000
 
 ### Register User to the /auth/register endpoint
-POST http://localhost:8080/auth/register
+POST http://localhost:8000/auth/register
 Content-Type: application/json
 
 {
-    "username":"hee",
-    "password":"sdfasd"
+    "username":"clown123@gmmail.com",
+    "password":"password123"
 }
 
 ### login user  to the /auth/login endpoint
