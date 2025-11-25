@@ -1,0 +1,14 @@
+### GET /
+GET http://localhost:8080
+
+### Register User to the /auth/register endpoint
+POST http://localhost:8080/auth/register
+Content-Type: application/json
+
+{
+    "username":"hee",
+    "password":"sdfasd"
+}
+
+### login user  to the /auth/login endpoint
+POST http://localhost:8080/auth/login

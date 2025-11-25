@@ -5,7 +5,19 @@ import db from "../db.js";
 
 const router = express.Router();
 
-router.post("/register", (req, res) => {});
+//register a new user endpoint /auth/register
+router.post("/register", (req, res) => {
+  const { username, password } = req.body;
+  const hashedPassword = bcrypt.hashSync(password, 8);
+
+  try {
+  } catch (err) {
+    console.loog(err.message);
+    res.sendStatus(503);
+  }
+});
+
+//login a user endpoint /auth/login
 router.post("/login", (req, res) => {});
 
 export default router;
